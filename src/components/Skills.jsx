@@ -3,13 +3,13 @@ import { motion } from 'framer-motion';
 import './Skills.css';
 
 const skills = [
-  { name: 'LoadRunner / JMeter', percentage: 85 },
-  { name: 'C', percentage: 80 },
-  { name: 'Python', percentage: 80 },
-  { name: 'HTML and CSS', percentage: 80 },
-  { name: 'Splunk Enterprise', percentage: 80 },
-  { name: 'GSheet / Excel', percentage: 80 },
-  { name: 'PowerBI', percentage: 65 }
+  { name: 'LoadRunner / JMeter' },
+  { name: 'C' },
+  { name: 'Python' },
+  { name: 'HTML and CSS' },
+  { name: 'Splunk Enterprise' },
+  { name: 'GSheet / Excel' },
+  { name: 'PowerBI' }
 ];
 
 const Skills = () => {
@@ -33,21 +33,10 @@ const Skills = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ y: -5, borderColor: "var(--primary)" }}
+                whileHover={{ y: -5, scale: 1.05, borderColor: "var(--primary)", boxShadow: "0 10px 30px -10px var(--primary-glow)" }}
               >
-                <div className="skill-header">
+                <div className="skill-content">
                   <h3>{skill.name}</h3>
-                  <span className="skill-percentage">{skill.percentage}%</span>
-                </div>
-                
-                <div className="skill-bar-bg">
-                  <motion.div 
-                    className="skill-bar-fill"
-                    initial={{ width: 0 }}
-                    whileInView={{ width: `${skill.percentage}%` }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1.5, delay: 0.2 + (index * 0.1), ease: "easeOut" }}
-                  />
                 </div>
               </motion.div>
             ))}
