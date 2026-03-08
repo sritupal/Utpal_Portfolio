@@ -6,23 +6,30 @@ import './Experience.css';
 const experiences = [
   {
     id: 1,
-    date: 'Jan 2025 - Feb 2025',
+    date: 'Aug 2025 - Dec 2025',
+    company: 'Volkswagen',
+    role: 'QEA Associate',
+    description: 'Providing quality engineering solutions and working on software performance and reliability.'
+  },
+  {
+    id: 2,
+    date: 'Jan 2025 - July 2025',
     company: 'Lineage',
     role: 'Quality Engineering Analyst',
     description: 'Using JMeter for performance testing and achieving system stability and reliability for the environment upgrade. Worked well with teams to ensure software quality and developed test plans to guide testing efforts.'
   },
   {
-    id: 2,
+    id: 3,
     date: 'Dec 2024 - Jan 2025',
     company: 'American Tire Distributor',
-    role: 'Quality Engineering Analyst',
+    role: 'QEA Associate',
     description: 'Leveraged LoadRunner and JMeter for performance testing, achieving system stability and reliability. Enhanced data storage and retrieval through proficient MySQL database management. Exhibited strong collaborative skills by working effectively with cross-functional teams.'
   },
   {
-    id: 3,
+    id: 4,
     date: 'Nov 2024 - Dec 2024',
     company: 'Academy - Sports+Outdoors',
-    role: 'Quality Engineering Analyst',
+    role: 'QEA Associate',
     description: 'Successfully utilized LoadRunner/JMeter for performance testing, ensuring system stability and reliability. Optimized data storage and retrieval through MySQL database management. Demonstrated strong teamwork skills through effective collaboration with cross-functional teams.'
   },
   {
