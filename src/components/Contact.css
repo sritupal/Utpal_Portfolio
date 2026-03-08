@@ -1,0 +1,121 @@
+.contact-section {
+  position: relative;
+  z-index: 10;
+  padding-bottom: 120px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contact-info {
+  padding: 3rem 2rem;
+  height: 100%;
+}
+
+.contact-info h3 {
+  font-size: 1.75rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.contact-subtitle {
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.info-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(74, 222, 128, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.info-item h4 {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-main);
+}
+
+.info-item p {
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.contact-form-wrapper {
+  padding: 3rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-main);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 15px rgba(74, 222, 128, 0.1);
+}
+
+.submit-btn {
+  gap: 0.5rem;
+  padding: 1.25rem;
+  font-size: 1rem;
+  width: fit-content;
+}
+
+.form-status {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(74, 222, 128, 0.1);
+  color: var(--primary);
+  border-radius: 8px;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-info,
+  .contact-form-wrapper {
+    padding: 2rem 1.5rem;
+  }
+}

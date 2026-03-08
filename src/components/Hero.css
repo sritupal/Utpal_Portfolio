@@ -1,0 +1,130 @@
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 60px 0;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-content {
+  max-width: 800px;
+  z-index: 10;
+}
+
+.hero-greeting {
+  font-size: 1.25rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 8vw, 6rem);
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+  letter-spacing: -2px;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  color: #cbd5e1;
+  max-width: 700px;
+  margin-bottom: 3rem;
+  line-height: 1.8;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: var(--transition);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #000;
+  border: 1px solid var(--primary);
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: var(--primary);
+  box-shadow: 0 0 20px var(--primary-glow);
+}
+
+.btn-secondary {
+  border: 1px solid var(--border-color);
+  background: transparent;
+  color: var(--text-main);
+}
+
+.btn-secondary:hover {
+  background: var(--surface-hover);
+  border-color: var(--primary);
+}
+
+.hero-socials {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.social-icon {
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.social-icon:hover {
+  color: var(--primary);
+  transform: translateY(-5px);
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .hero-actions {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+}

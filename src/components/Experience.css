@@ -1,0 +1,100 @@
+.experience-section {
+  position: relative;
+  z-index: 10;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 30px;
+  height: 100%;
+  width: 2px;
+  background: var(--border-color);
+  z-index: -1;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+  padding: 2rem;
+  margin-left: 60px;
+  transition: var(--transition);
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -40px;
+  top: 30px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--bg-color);
+  border: 4px solid var(--primary);
+  box-shadow: 0 0 10px var(--primary-glow);
+  z-index: 2;
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.company-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary);
+}
+
+.company-badge h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.date-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.role {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.description {
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 640px) {
+  .timeline::before {
+    left: 20px;
+  }
+  
+  .timeline-item {
+    margin-left: 50px;
+    padding: 1.5rem;
+  }
+  
+  .timeline-dot {
+    left: -40px;
+  }
+}
