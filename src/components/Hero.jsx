@@ -68,7 +68,7 @@ const Hero = () => {
             <a href="https://www.linkedin.com/in/utpal-nath-146797119/" target="_blank" rel="noreferrer" className="social-icon">
               <Linkedin size={24} />
             </a>
-            <a href="https://github.com/" target="_blank" rel="noreferrer" className="social-icon">
+            <a href="https://github.com/sritupal" target="_blank" rel="noreferrer" className="social-icon">
               <Github size={24} />
             </a>
             <a href="mailto:sriutpalnath270@gmail.com" className="social-icon">
