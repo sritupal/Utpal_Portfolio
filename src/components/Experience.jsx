@@ -9,13 +9,13 @@ const experiences = [
     date: 'Aug 2025 - Dec 2025',
     company: 'Volkswagen',
     role: 'QEA Associate',
-    description: 'Providing quality engineering solutions and working on software performance and reliability.'
+    description: 'Utilized Apache JMeter for Performance Testing to ensure stability in Risk Management Systems. Automated tests with Selenium, Playwright, and Artillery to boost efficiency. Collaborated with cross-functional teams and applied Quality Engineering practices to maintain high standards. Created detailed test plans to ensure thorough validation.'
   },
   {
     id: 2,
     date: 'Jan 2025 - July 2025',
     company: 'Lineage',
-    role: 'Quality Engineering Analyst',
+    role: 'QEA Associate',
     description: 'Using JMeter for performance testing and achieving system stability and reliability for the environment upgrade. Worked well with teams to ensure software quality and developed test plans to guide testing efforts.'
   },
   {
@@ -36,7 +36,7 @@ const experiences = [
     id: 4,
     date: 'Feb 2021 - Nov 2024',
     company: 'Woolworths',
-    role: 'Quality Engineering Analyst',
+    role: 'QEA Programming Analyst Trainee',
     description: 'Resolved system issues via root cause analysis. Enhanced operational efficiency and drove process improvements. Ensured application reliability and performance by developing and executing automated test scripts with LoadRunner and JMeter. Automated UI workflows, API tests (Postman), backend database tests, and Azure triggers using Splunk and C.'
   },
   {
@@ -44,7 +44,7 @@ const experiences = [
     date: 'July 2020 - Sept 2020',
     company: 'GRIP-The Sparks Foundation',
     role: 'Data Entry & Analysis Intern',
-    description: 'Worked for GRIP-The Sparks Foundation as an intern for a month on Python3 as an data entry and analysis and got a completion certificate.'
+    description: 'Worked for GRIP-The Sparks Foundation as an intern for a month on Python3 as a data entry and analysis intern and got a completion certificate.'
   }
 ];
 
