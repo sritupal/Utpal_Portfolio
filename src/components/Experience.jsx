@@ -33,14 +33,14 @@ const experiences = [
     description: 'Successfully utilized LoadRunner/JMeter for performance testing, ensuring system stability and reliability. Optimized data storage and retrieval through MySQL database management. Demonstrated strong teamwork skills through effective collaboration with cross-functional teams.'
   },
   {
-    id: 4,
+    id: 5,
     date: 'Feb 2021 - Nov 2024',
     company: 'Woolworths',
     role: 'QEA Programming Analyst Trainee',
     description: 'Resolved system issues via root cause analysis. Enhanced operational efficiency and drove process improvements. Ensured application reliability and performance by developing and executing automated test scripts with LoadRunner and JMeter. Automated UI workflows, API tests (Postman), backend database tests, and Azure triggers using Splunk and C.'
   },
   {
-    id: 5,
+    id: 6,
     date: 'July 2020 - Sept 2020',
     company: 'GRIP-The Sparks Foundation',
     role: 'Data Entry & Analysis Intern',
