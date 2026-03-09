@@ -2,13 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import './Skills.css';
 
-import { 
-  BarChart3, 
-  Terminal, 
-  Code2, 
-  BrainCircuit, 
-  Layers, 
-  Zap 
+import {
+  BarChart3,
+  Terminal,
+  Code2,
+  BrainCircuit,
+  Layers,
+  Zap
 } from 'lucide-react';
 import './Skills.css';
 
@@ -18,7 +18,7 @@ const skillCategories = [
     icon: <BarChart3 className="category-icon" />,
     skills: [
       { name: 'Apache JMeter', level: 'Expert' },
-      { name: 'HP LoadRunner', level: 'Advanced' },
+      { name: 'LoadRunner', level: 'Advanced' },
       { name: 'Load Testing' },
       { name: 'Stress Testing' },
       { name: 'Scalability Testing' },
@@ -32,6 +32,8 @@ const skillCategories = [
     icon: <Zap className="category-icon" />,
     skills: [
       { name: 'Selenium WebDriver', level: 'Expert' },
+      { name: 'Playwright' },
+      { name: 'Artillery' },
       { name: 'TestNG' },
       { name: 'API Testing' },
       { name: 'Postman' },
@@ -47,7 +49,7 @@ const skillCategories = [
     title: 'Programming Languages',
     icon: <Code2 className="category-icon" />,
     skills: [
-      { name: 'Python', level: 'Expert' },
+      { name: 'Python' },
       { name: 'Java' },
       { name: 'SQL' },
       { name: 'JavaScript' },
@@ -61,6 +63,9 @@ const skillCategories = [
       { name: 'Generative AI', level: 'Advanced' },
       { name: 'Machine Learning', level: 'Familiar' },
       { name: 'Data Analysis' },
+      { name: 'Excel' },
+      { name: 'GSheet' },
+      { name: 'PowerBI' },
       { name: 'Pandas' },
       { name: 'NumPy' },
       { name: 'Matplotlib' },
@@ -75,6 +80,7 @@ const skillCategories = [
     title: 'DevOps & Tools',
     icon: <Layers className="category-icon" />,
     skills: [
+      { name: 'Splunk Enterprise' },
       { name: 'Git' },
       { name: 'Jenkins', level: 'Advanced' },
       { name: 'Docker', level: 'Familiar' },
@@ -97,10 +103,10 @@ const Skills = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="section-title">Technical <span>Skills</span></h2>
-          
+
           <div className="categories-grid">
             {skillCategories.map((category, catIndex) => (
-              <motion.div 
+              <motion.div
                 key={category.title}
                 className="skill-category-card glass-panel"
                 initial={{ opacity: 0, x: -30 }}
@@ -112,10 +118,10 @@ const Skills = () => {
                   {category.icon}
                   <h3>{category.title}</h3>
                 </div>
-                
+
                 <div className="skills-pill-container">
                   {category.skills.map((skill, skillIndex) => (
-                    <motion.div 
+                    <motion.div
                       key={skill.name}
                       className={`skill-pill ${skill.level ? 'has-level' : ''}`}
                       whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 255, 255, 0.15)" }}
