@@ -17,7 +17,7 @@ const skillCategories = [
     title: 'Performance Testing',
     icon: <BarChart3 className="category-icon" />,
     skills: [
-      { name: 'Apache JMeter', level: 'Expert' },
+      { name: 'Apache JMeter', level: 'Advanced' },
       { name: 'LoadRunner', level: 'Advanced' },
       { name: 'Load Testing' },
       { name: 'Stress Testing' },
@@ -31,7 +31,7 @@ const skillCategories = [
     title: 'Test Automation',
     icon: <Zap className="category-icon" />,
     skills: [
-      { name: 'Selenium WebDriver', level: 'Expert' },
+      { name: 'Selenium WebDriver', level: 'Advanced' },
       { name: 'Playwright' },
       { name: 'Artillery' },
       { name: 'TestNG' },
@@ -40,7 +40,7 @@ const skillCategories = [
       { name: 'REST APIs' },
       { name: 'Regression Testing' },
       { name: 'CI/CD Integration' },
-      { name: 'Jenkins', level: 'Advanced' },
+      { name: 'Jenkins' },
       { name: 'BDD' },
       { name: 'TDD' }
     ]
@@ -63,16 +63,8 @@ const skillCategories = [
       { name: 'Generative AI', level: 'Advanced' },
       { name: 'Machine Learning', level: 'Familiar' },
       { name: 'Data Analysis' },
-      { name: 'Excel' },
-      { name: 'GSheet' },
-      { name: 'PowerBI' },
       { name: 'Pandas' },
       { name: 'NumPy' },
-      { name: 'Matplotlib' },
-      { name: 'Seaborn' },
-      { name: 'Random Forest' },
-      { name: 'Logistic Regression' },
-      { name: 'SVM' },
       { name: 'Data Visualization' }
     ]
   },
@@ -82,7 +74,7 @@ const skillCategories = [
     skills: [
       { name: 'Splunk Enterprise' },
       { name: 'Git' },
-      { name: 'Jenkins', level: 'Advanced' },
+      { name: 'Jenkins' },
       { name: 'Docker', level: 'Familiar' },
       { name: 'JIRA' },
       { name: 'Maven' },
