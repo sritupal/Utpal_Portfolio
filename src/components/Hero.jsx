@@ -7,13 +7,13 @@ const Hero = () => {
   return (
     <section id="home" className="hero-section">
       <div className="container hero-container">
-        <motion.div 
+        <motion.div
           className="hero-content"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <motion.p 
+          <motion.p
             className="hero-greeting"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -21,8 +21,8 @@ const Hero = () => {
           >
             Hello. My name is
           </motion.p>
-          
-          <motion.h1 
+
+          <motion.h1
             className="hero-title"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -30,8 +30,8 @@ const Hero = () => {
           >
             Sri <span className="gradient-text">Utpal Nath</span>
           </motion.h1>
-          
-          <motion.h2 
+
+          <motion.h2
             className="hero-subtitle"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -40,16 +40,16 @@ const Hero = () => {
             Quality Engineering Analyst & Programmer
           </motion.h2>
 
-          <motion.p 
+          <motion.p
             className="hero-description"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8, duration: 0.8 }}
           >
-            Experienced Quality Engineering Analyst with a proven track record of delivering high-quality results in fast-paced environments. Skilled in Python, C, Splunk, and LoadRunner/JMeter. Demonstrated ability as a team player, fast learner, and leader. Excited to bring my expertise to a dynamic team and contribute to achieving organizational goals.
+            I'm a Quality Engineering Analyst with 4+ years of experience at Cognizant, specializing in performance testing and test automation for enterprise applications. I work extensively with JMeter, LoadRunner, and Selenium to build scalable testing frameworks and identify system bottlenecks before they hit production. Beyond testing, I bring a strong data-driven mindset — applying Generative AI to testing workflows and leveraging Python and machine learning to extract insights from complex datasets. I'm passionate about bridging the gap between quality engineering and intelligent automation, constantly exploring new technologies to build smarter, faster, and more reliable systems.
           </motion.p>
 
-          <motion.div 
+          <motion.div
             className="hero-actions"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -59,7 +59,7 @@ const Hero = () => {
             <a href="#experience" className="btn btn-secondary glass-panel">View Experience</a>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="hero-socials"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -77,8 +77,8 @@ const Hero = () => {
           </motion.div>
         </motion.div>
       </div>
-      
-      <motion.div 
+
+      <motion.div
         className="scroll-indicator"
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 2 }}
