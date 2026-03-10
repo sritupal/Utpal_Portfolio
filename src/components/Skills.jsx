@@ -63,16 +63,10 @@ const skillCategories = [
       { name: 'Generative AI', level: 'Advanced' },
       { name: 'Machine Learning', level: 'Familiar' },
       { name: 'Data Analysis' },
-      { name: 'Excel' },
-      { name: 'GSheet' },
       { name: 'PowerBI' },
       { name: 'Pandas' },
       { name: 'NumPy' },
-      { name: 'Matplotlib' },
-      { name: 'Seaborn' },
-      { name: 'Random Forest' },
       { name: 'Logistic Regression' },
-      { name: 'SVM' },
       { name: 'Data Visualization' }
     ]
   },
