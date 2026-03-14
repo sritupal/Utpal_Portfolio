@@ -7,6 +7,23 @@ const Hero = () => {
   return (
     <section id="home" className="hero-section">
       <div className="container hero-container">
+        {/* Profile Picture - Left Side */}
+        <motion.div
+          className="hero-image-wrapper"
+          initial={{ opacity: 0, x: -40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.9 }}
+        >
+          <div className="hero-image-ring">
+            <img
+              src={`${import.meta.env.BASE_URL}images/Profile.jpeg`}
+              alt="Sri Utpal Nath"
+              className="hero-profile-img"
+            />
+          </div>
+        </motion.div>
+
+        {/* Content - Right Side */}
         <motion.div
           className="hero-content"
           initial={{ opacity: 0, y: 30 }}
@@ -37,7 +54,7 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            Quality Engineering Analyst & Programmer
+            Quality Engineering Analyst &amp; Programmer
           </motion.h2>
 
           <motion.p
