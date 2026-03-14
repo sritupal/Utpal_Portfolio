@@ -46,7 +46,7 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8, duration: 0.8 }}
           >
-            I'm a Quality Engineering Analyst with 4+ years of experience at Cognizant, specializing in performance testing and test automation for enterprise applications. I work extensively with JMeter, LoadRunner, and Selenium to build scalable testing frameworks and identify system bottlenecks before they hit production. Beyond testing, I bring a strong data-driven mindset — applying Generative AI to testing workflows and leveraging Python and machine learning to extract insights from complex datasets. I'm passionate about bridging the gap between quality engineering and intelligent automation, constantly exploring new technologies to build smarter, faster, and more reliable systems.
+            I'm a Quality Engineering Analyst with 4+ years of experience at MNC, specializing in performance testing and test automation for enterprise applications. I work extensively with <strong>JMeter</strong>, <strong>LoadRunner</strong>, and <strong>Selenium</strong> to build scalable testing frameworks and identify system bottlenecks before they hit production. Beyond testing, I bring a strong data-driven mindset — applying <strong>Generative AI</strong> to testing workflows and leveraging <strong>Python</strong> and <strong>Machine Learning</strong> to extract insights from complex datasets. I'm passionate about bridging the gap between quality engineering and intelligent automation, constantly exploring new technologies to build smarter, faster, and more reliable systems.
           </motion.p>
 
           <motion.div
@@ -56,7 +56,7 @@ const Hero = () => {
             transition={{ delay: 1, duration: 0.8 }}
           >
             <a href="#contact" className="btn btn-primary">Let's Talk</a>
-            <a href="#experience" className="btn btn-secondary glass-panel">View Experience</a>
+            <a href="#skills" className="btn btn-secondary glass-panel">Technical Skills</a>
           </motion.div>
 
           <motion.div
