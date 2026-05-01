@@ -6,41 +6,48 @@ import './Experience.css';
 const experiences = [
   {
     id: 1,
+    date: 'Jan 2026 - Present',
+    company: 'DAMAC Living',
+    role: 'Senior Performance Tester',
+    description: 'Driving end-to-end performance testing initiatives for one of the region\'s leading real estate platforms. Leveraging Apache JMeter for load, stress, and scalability testing, while utilizing Appium for cross-device mobile performance validation — ensuring seamless user experiences across web and mobile ecosystems.'
+  },
+  {
+    id: 2,
     date: 'Aug 2025 - Dec 2025',
     company: 'Volkswagen',
     role: 'QEA Associate',
     description: 'Utilized Apache JMeter for Performance Testing to ensure stability in Risk Management Systems. Automated tests with Selenium, Playwright, and Artillery to boost efficiency. Collaborated with cross-functional teams and applied Quality Engineering practices to maintain high standards. Created detailed test plans to ensure thorough validation.'
   },
   {
-    id: 2,
+    id: 3,
     date: 'Jan 2025 - July 2025',
     company: 'Lineage',
     role: 'QEA Associate',
     description: 'Using JMeter for performance testing and achieving system stability and reliability for the environment upgrade. Worked well with teams to ensure software quality and developed test plans to guide testing efforts.'
   },
   {
-    id: 3,
+    id: 4,
     date: 'Dec 2024 - Jan 2025',
     company: 'American Tire Distributor',
     role: 'QEA Associate',
     description: 'Leveraged LoadRunner and JMeter for performance testing, achieving system stability and reliability. Enhanced data storage and retrieval through proficient MySQL database management. Exhibited strong collaborative skills by working effectively with cross-functional teams.'
   },
   {
-    id: 4,
+    id: 5,
     date: 'Nov 2024 - Dec 2024',
     company: 'Academy - Sports+Outdoors',
     role: 'QEA Associate',
     description: 'Successfully utilized LoadRunner/JMeter for performance testing, ensuring system stability and reliability. Optimized data storage and retrieval through MySQL database management. Demonstrated strong teamwork skills through effective collaboration with cross-functional teams.'
   },
   {
-    id: 5,
+    id: 6,
     date: 'Feb 2021 - Nov 2024',
     company: 'Woolworths',
     role: 'QEA Programming Analyst Trainee',
     description: 'Resolved system issues via root cause analysis. Enhanced operational efficiency and drove process improvements. Ensured application reliability and performance by developing and executing automated test scripts with LoadRunner and JMeter. Automated UI workflows, API tests (Postman), backend database tests, and Azure triggers using Splunk and C.'
   },
   {
-    id: 6,
+    id: 7,
     date: 'July 2020 - Sept 2020',
     company: 'GRIP-The Sparks Foundation',
     role: 'Data Entry & Analysis Intern',
