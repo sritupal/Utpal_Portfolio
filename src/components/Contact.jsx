@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Mail, Send } from 'lucide-react';
+import { Send } from 'lucide-react';
 import './Contact.css';
 
 const Contact = () => {
@@ -49,57 +49,57 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section contact-section">
+    <section id="contact" className="contact-section">
       <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
+        
+        <motion.h2 
+          className="section-heading-italic"
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">Get In <span>Touch</span></h2>
-          
-          <div className="contact-grid">
-            <motion.div 
-              className="contact-info glass-panel"
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <h3>Contact Information</h3>
-              <p className="contact-subtitle">Feel free to reach out for collaborations or just a friendly hello.</p>
-              
-              <div className="info-item">
-                <div className="info-icon">
-                  <MapPin size={24} />
-                </div>
-                <div>
-                  <h4>Address</h4>
-                  <p>House No. 6A, Dr. Zakir Hussain Road, Hengrabari, Sananya Path, By Lane 11, Guwahati, Assam - 781036</p>
-                </div>
-              </div>
-              
-              <div className="info-item">
-                <div className="info-icon">
-                  <Mail size={24} />
-                </div>
-                <div>
-                  <h4>Email</h4>
-                  <p>sriutpalnath270@gmail.com</p>
-                </div>
-              </div>
-            </motion.div>
+          contact.
+        </motion.h2>
 
-            <motion.div 
-              className="contact-form-wrapper glass-panel"
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              <form onSubmit={handleSubmit} className="contact-form">
-                <div className="form-group">
+        <div className="contact-layout">
+          {/* Left: Decorative Image */}
+          <motion.div 
+            className="contact-image-wrapper"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <img 
+              src={`${import.meta.env.BASE_URL}images/Profile.jpeg`} // Using profile as per common portfolio pattern or generic deco
+              alt="Sri Utpal Nath" 
+              className="contact-image"
+            />
+          </motion.div>
+
+          {/* Right: Socials + Form */}
+          <motion.div 
+            className="contact-content"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="contact-links">
+              <p className="contact-text">
+                Have a project in mind or just want to say hi? Feel free to reach out.
+              </p>
+              <div className="social-links-list">
+                <a href="mailto:sriutpalnath270@gmail.com" className="social-link-item">sriutpalnath270@gmail.com</a>
+                <a href="https://www.linkedin.com/in/utpal-nath-146797119/" target="_blank" rel="noreferrer" className="social-link-item">linkedin.com/in/utpal-nath</a>
+                <a href="https://github.com/sritupal" target="_blank" rel="noreferrer" className="social-link-item">github.com/sritupal</a>
+              </div>
+            </div>
+
+            <div className="contact-form-container">
+              <form onSubmit={handleSubmit} className="minimal-contact-form">
+                <div className="form-row">
                   <input 
                     type="text" 
                     name="name" 
@@ -108,9 +108,6 @@ const Contact = () => {
                     onChange={handleChange}
                     required 
                   />
-                </div>
-                
-                <div className="form-group">
                   <input 
                     type="email" 
                     name="email" 
@@ -120,39 +117,31 @@ const Contact = () => {
                     required 
                   />
                 </div>
-                
-                <div className="form-group">
-                  <input 
-                    type="text" 
-                    name="subject" 
-                    placeholder="Subject" 
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required 
-                  />
-                </div>
-                
-                <div className="form-group">
-                  <textarea 
-                    name="message" 
-                    placeholder="Your Message" 
-                    rows="5" 
-                    value={formData.message}
-                    onChange={handleChange}
-                    required 
-                  />
-                </div>
-                
-                <button type="submit" className="btn btn-primary submit-btn">
-                  <span>Send Message</span>
-                  <Send size={18} />
+                <input 
+                  type="text" 
+                  name="subject" 
+                  placeholder="Subject" 
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required 
+                />
+                <textarea 
+                  name="message" 
+                  placeholder="Your Message" 
+                  rows="4" 
+                  value={formData.message}
+                  onChange={handleChange}
+                  required 
+                />
+                <button type="submit" className="btn-resume" style={{ padding: '0.8rem 2rem', marginTop: '1rem' }}>
+                  Send Message
                 </button>
-                
                 {status && <p className="form-status">{status}</p>}
               </form>
-            </motion.div>
-          </div>
-        </motion.div>
+            </div>
+          </motion.div>
+        </div>
+
       </div>
     </section>
   );

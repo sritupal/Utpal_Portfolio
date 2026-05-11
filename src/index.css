@@ -1,25 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&display=swap');
 
+/* ─────────────────────────────────────────────
+   DESIGN TOKENS
+───────────────────────────────────────────── */
 :root {
-  --bg-color: #050505;
-  --surface-color: rgba(255, 255, 255, 0.03);
-  --surface-hover: rgba(255, 255, 255, 0.08);
-  --border-color: rgba(255, 255, 255, 0.08);
-  
-  --primary: #4ade80; /* vibrant green */
-  --primary-glow: rgba(74, 222, 128, 0.4);
-  --secondary: #60a5fa; /* light blue */
-  
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
-  
-  --font-heading: 'Outfit', sans-serif;
-  --font-body: 'Inter', sans-serif;
-  
+  /* Core palette */
+  --bg:             #f5f5c8;
+  --bg-card:        #eeeeb5;
+  --navy:           #1a1a6e;
+  --olive:          #6b6b1a;
+  --accent-yellow:  #aaaa00;
+  --border-color:   rgba(26, 26, 110, 0.15);
+
+  /* Text */
+  --text-body:  #2a2a2a;
+  --text-muted: #555555;
+
+  /* Aliases kept for existing component compatibility */
+  --primary:        var(--navy);
+  --primary-glow:   rgba(26, 26, 110, 0.18);
+  --secondary:      var(--olive);
+  --bg-color:       var(--bg);
+  --surface-color:  rgba(26, 26, 110, 0.05);
+  --surface-hover:  rgba(26, 26, 110, 0.10);
+  --text-main:      var(--text-body);
+
+  /* Typography */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+
+  /* Misc */
   --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --radius:     12px;
+  --shadow:     0 4px 24px rgba(26, 26, 110, 0.10);
 }
 
-* {
+/* ─────────────────────────────────────────────
+   RESET
+───────────────────────────────────────────── */
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -31,17 +50,22 @@ html {
 
 body {
   font-family: var(--font-body);
-  background-color: var(--bg-color);
-  color: var(--text-main);
-  line-height: 1.6;
+  background-color: var(--bg);
+  color: var(--text-body);
+  line-height: 1.65;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+/* ─────────────────────────────────────────────
+   TYPOGRAPHY BASE
+───────────────────────────────────────────── */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  font-weight: 700;
-  line-height: 1.2;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.15;
 }
 
 a {
@@ -54,72 +78,83 @@ ul {
   list-style: none;
 }
 
-/* Glassmorphism Utilities */
-.glass-panel {
-  background: var(--surface-color);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
+/* ─────────────────────────────────────────────
+   UTILITY — SECTION ITALIC HEADING
+   Used for: about. / work. / contact. / skills.
+───────────────────────────────────────────── */
+.section-heading-italic {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(3.5rem, 9vw, 6.5rem);
+  color: var(--accent-yellow);
+  line-height: 1;
+  margin-bottom: 2.5rem;
+  letter-spacing: -2px;
 }
 
-/* Gradients text */
+/* ─────────────────────────────────────────────
+   UTILITY — GLASS PANEL (light-theme version)
+───────────────────────────────────────────── */
+.glass-panel {
+  background: rgba(245, 245, 195, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* ─────────────────────────────────────────────
+   UTILITY — GRADIENT TEXT
+───────────────────────────────────────────── */
 .gradient-text {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  background: linear-gradient(135deg, var(--navy) 0%, var(--olive) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Global Container */
+/* ─────────────────────────────────────────────
+   LAYOUT
+───────────────────────────────────────────── */
 .container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-/* Section */
 .section {
   padding: 100px 0;
   position: relative;
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
   margin-bottom: 3rem;
-  text-align: center;
+  color: var(--navy);
 }
 
 .section-title span {
-  color: var(--primary);
+  color: var(--olive);
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: var(--bg-color);
-}
-::-webkit-scrollbar-thumb {
-  background: #333;
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--primary);
-}
+/* ─────────────────────────────────────────────
+   SCROLLBAR
+───────────────────────────────────────────── */
+::-webkit-scrollbar        { width: 6px; }
+::-webkit-scrollbar-track  { background: var(--bg); }
+::-webkit-scrollbar-thumb  { background: var(--olive); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--navy); }
 
-/* Background effects */
-.bg-fixed-glow {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
-  filter: blur(100px);
-  z-index: -1;
-  opacity: 0.5;
-  pointer-events: none;
+/* ─────────────────────────────────────────────
+   FOOTER
+───────────────────────────────────────────── */
+.footer {
+  background: var(--navy);
+  color: rgba(245, 245, 200, 0.7);
+  text-align: center;
+  padding: 1.5rem 2rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.5px;
 }

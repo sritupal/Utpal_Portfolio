@@ -1,0 +1,167 @@
+.work-section {
+  padding: 100px 0;
+  background-color: var(--bg);
+  overflow-x: hidden;
+}
+
+.work-intro {
+  max-width: 600px;
+  margin-bottom: 5rem;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+.work-snake-container {
+  display: flex;
+  gap: 3rem;
+  padding: 2rem 4rem 6rem 4rem; /* More padding for better spacing */
+  position: relative;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+}
+
+/* Re-enabling a subtle scrollbar so users know it scrolls */
+.work-snake-container::-webkit-scrollbar {
+  height: 6px;
+  display: block;
+}
+
+.work-snake-container::-webkit-scrollbar-track {
+  background: rgba(26, 26, 110, 0.05);
+  margin: 0 4rem;
+}
+
+.work-snake-container::-webkit-scrollbar-thumb {
+  background: var(--olive);
+  border-radius: 10px;
+}
+
+.work-snake-path {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  min-width: 2500px; /* Ensure it covers all cards */
+  height: 2px;
+  background: var(--olive);
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.work-card-wrapper {
+  flex: 0 0 350px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-offset {
+  margin-top: 6rem;
+}
+
+.work-card {
+  background: #ffffff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border-color);
+  width: 100%;
+}
+
+.work-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 32px rgba(26, 26, 110, 0.15);
+}
+
+.work-card-image {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.work-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.work-card:hover .work-card-image img {
+  transform: scale(1.1);
+}
+
+.work-card-date {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: var(--navy);
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: var(--font-body);
+}
+
+.work-card-content {
+  padding: 1.5rem;
+}
+
+.work-card-title {
+  font-size: 1.25rem;
+  color: var(--navy);
+  margin-bottom: 0.25rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+}
+
+.work-card-role {
+  font-size: 0.95rem;
+  color: var(--olive);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.work-card-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.snake-dot {
+  width: 12px;
+  height: 12px;
+  background: var(--navy);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: -3rem; /* Default position for non-offset */
+  z-index: 3;
+  border: 2px solid var(--bg);
+}
+
+.card-offset .snake-dot {
+  margin-top: -9rem; /* Adjusted for offset cards to stay on line */
+}
+
+/* Adjust snake dot for offset */
+.work-card-wrapper:not(.card-offset) .snake-dot {
+  top: auto;
+  bottom: -3.6rem;
+}
+
+.work-card-wrapper.card-offset .snake-dot {
+  top: -3.4rem;
+}
+
+@media (max-width: 768px) {
+  .work-card-wrapper {
+    flex: 0 0 280px;
+  }
+}

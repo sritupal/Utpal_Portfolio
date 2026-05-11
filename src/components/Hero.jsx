@@ -1,19 +1,75 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, ArrowDown } from 'lucide-react';
 import './Hero.css';
 
 const Hero = () => {
   return (
     <section id="home" className="hero-section">
       <div className="container hero-container">
-        {/* Profile Picture - Left Side */}
+
+        {/* ── Left: Text Content ── */}
+        <motion.div
+          className="hero-content"
+          initial={{ opacity: 0, x: -40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <motion.p
+            className="hero-greeting"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+          >
+            Hello, I'm Sri Utpal,
+          </motion.p>
+
+          <motion.h1
+            className="hero-title"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.35, duration: 0.7 }}
+          >
+            Quality<br />Engineering<br />Analyst
+          </motion.h1>
+
+          <motion.p
+            className="hero-location"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.55, duration: 0.6 }}
+          >
+            based in Guwahati, India.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.75, duration: 0.6 }}
+          >
+            <a
+              href={`${import.meta.env.BASE_URL}UtpalNath_CV_2026.pdf`}
+              download="UtpalNath_CV_2026.pdf"
+              className="btn-resume"
+            >
+              Resume
+            </a>
+          </motion.div>
+        </motion.div>
+
+        {/* ── Right: Profile Image + Decorative ── */}
         <motion.div
           className="hero-image-wrapper"
-          initial={{ opacity: 0, x: -40 }}
+          initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.9 }}
         >
+          {/* Decorative ++ top-right */}
+          <div className="deco-plus" aria-hidden="true">
+            <span className="plus-a">+</span>
+            <span className="plus-b">+</span>
+          </div>
+
+          {/* Circular profile photo */}
           <div className="hero-image-ring">
             <img
               src={`${import.meta.env.BASE_URL}images/Profile.jpeg`}
@@ -21,87 +77,17 @@ const Hero = () => {
               className="hero-profile-img"
             />
           </div>
+
+          {/* Decorative //// bottom-left */}
+          <div className="deco-slashes" aria-hidden="true">
+            <span>/</span>
+            <span>/</span>
+            <span>/</span>
+            <span>/</span>
+          </div>
         </motion.div>
 
-        {/* Content - Right Side */}
-        <motion.div
-          className="hero-content"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <motion.p
-            className="hero-greeting"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-          >
-            Hello. My name is
-          </motion.p>
-
-          <motion.h1
-            className="hero-title"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-          >
-            Sri <span className="gradient-text">Utpal Nath</span>
-          </motion.h1>
-
-          <motion.h2
-            className="hero-subtitle"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
-          >
-            Quality Engineering Analyst &amp; Programmer
-          </motion.h2>
-
-          <motion.p
-            className="hero-description"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.8, duration: 0.8 }}
-          >
-            I'm a Quality Engineering Analyst with 4+ years of experience at MNC, specializing in performance testing and test automation for enterprise applications. I work extensively with <strong>JMeter</strong>, <strong>LoadRunner</strong>, and <strong>Selenium</strong> to build scalable testing frameworks and identify system bottlenecks before they hit production. Beyond testing, I bring a strong data-driven mindset — applying <strong>Generative AI</strong> to testing workflows and leveraging <strong>Python</strong> and <strong>Machine Learning</strong> to extract insights from complex datasets. I'm passionate about bridging the gap between quality engineering and intelligent automation, constantly exploring new technologies to build smarter, faster, and more reliable systems.
-          </motion.p>
-
-          <motion.div
-            className="hero-actions"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 0.8 }}
-          >
-            <a href="#contact" className="btn btn-primary">Let's Talk</a>
-            <a href="#skills" className="btn btn-secondary glass-panel">Technical Skills</a>
-          </motion.div>
-
-          <motion.div
-            className="hero-socials"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.2, duration: 0.8 }}
-          >
-            <a href="https://www.linkedin.com/in/utpal-nath-146797119/" target="_blank" rel="noreferrer" className="social-icon">
-              <Linkedin size={24} />
-            </a>
-            <a href="https://github.com/sritupal" target="_blank" rel="noreferrer" className="social-icon">
-              <Github size={24} />
-            </a>
-            <a href="mailto:sriutpalnath270@gmail.com" className="social-icon">
-              <Mail size={24} />
-            </a>
-          </motion.div>
-        </motion.div>
       </div>
-
-      <motion.div
-        className="scroll-indicator"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ repeat: Infinity, duration: 2 }}
-      >
-        <ArrowDown size={24} />
-      </motion.div>
     </section>
   );
 };

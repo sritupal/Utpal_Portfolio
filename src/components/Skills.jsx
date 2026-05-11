@@ -96,7 +96,7 @@ const Skills = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">Technical <span>Skills</span></h2>
+          <h2 className="section-heading-italic">skills.</h2>
 
           <div className="categories-grid">
             {skillCategories.map((category, catIndex) => (

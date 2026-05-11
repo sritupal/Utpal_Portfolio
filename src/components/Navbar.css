@@ -1,0 +1,116 @@
+/* ─────────────────────────────────────────────
+   NAVBAR
+───────────────────────────────────────────── */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--bg);
+  transition: border-bottom 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar--scrolled {
+  border-bottom: 2px solid var(--olive);
+  box-shadow: 0 2px 16px rgba(26, 26, 110, 0.08);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+
+/* ── Brand ── */
+.navbar-brand {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--navy);
+  letter-spacing: -0.5px;
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+}
+
+.navbar-brand:hover {
+  color: var(--olive);
+}
+
+/* ── Nav Links ── */
+.navbar-links {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.navbar-links a {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--navy);
+  letter-spacing: 0.2px;
+  position: relative;
+  padding-bottom: 3px;
+  transition: color 0.2s ease;
+}
+
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--olive);
+  border-radius: 2px;
+  transition: width 0.25s ease;
+}
+
+.navbar-links a:hover {
+  color: var(--olive);
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+/* ── Social Icons ── */
+.navbar-socials {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.navbar-socials a {
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.navbar-socials a:hover {
+  color: var(--olive);
+  transform: translateY(-2px);
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .navbar-links {
+    gap: 1.2rem;
+  }
+
+  .navbar-links a {
+    font-size: 0.82rem;
+  }
+
+  .navbar-brand {
+    font-size: 0.9rem;
+  }
+
+  .navbar-socials {
+    gap: 0.8rem;
+  }
+}
