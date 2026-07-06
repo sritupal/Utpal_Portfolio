@@ -56,7 +56,7 @@ const workEntries = [
     date: 'July 2020',
     company: 'GRIP - Sparks Foundation',
     role: 'Data Entry & Analysis Intern',
-    image: 'https://images.unsplash.com/photo-1551288049-bbbda5366391?q=80&w=1000&auto=format&fit=crop',
+    image: `${import.meta.env.BASE_URL}images/tsf-logo.png`,
     description: 'Internship focused on Python3 for data entry and analysis tasks.'
   }
 ];

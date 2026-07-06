@@ -72,7 +72,7 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
           >
             <img 
-              src={`${import.meta.env.BASE_URL}images/Profile.jpeg`} // Using profile as per common portfolio pattern or generic deco
+              src={`${import.meta.env.BASE_URL}images/Professiona_Profile.jpeg`} // Using profile as per common portfolio pattern or generic deco
               alt="Sri Utpal Nath" 
               className="contact-image"
             />

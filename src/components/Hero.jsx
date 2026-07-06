@@ -47,8 +47,8 @@ const Hero = () => {
             transition={{ delay: 0.75, duration: 0.6 }}
           >
             <a
-              href={`${import.meta.env.BASE_URL}UtpalNath_CV_2026.pdf`}
-              download="UtpalNath_CV_2026.pdf"
+              href={`${import.meta.env.BASE_URL}Utpal_Nath_Resume_July_2026.pdf`}
+              download="Utpal_Nath_Resume_July_2026.pdf"
               className="btn-resume"
             >
               Resume
@@ -72,7 +72,7 @@ const Hero = () => {
           {/* Circular profile photo */}
           <div className="hero-image-ring">
             <img
-              src={`${import.meta.env.BASE_URL}images/Profile.jpeg`}
+              src={`${import.meta.env.BASE_URL}images/Professiona_Profile.jpeg`}
               alt="Sri Utpal Nath"
               className="hero-profile-img"
             />
