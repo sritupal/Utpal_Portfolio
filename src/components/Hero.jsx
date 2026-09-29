@@ -47,8 +47,8 @@ const Hero = () => {
             transition={{ delay: 0.75, duration: 0.6 }}
           >
             <a
-              href={`${import.meta.env.BASE_URL}Utpal_Nath_Resume_July_2026.pdf`}
-              download="Utpal_Nath_Resume_July_2026.pdf"
+              href={`${import.meta.env.BASE_URL}Utpal_Nath_Resume_Oct_2026.pdf`}
+              download="Utpal_Nath_Resume_Oct_2026.pdf"
               className="btn-resume"
             >
               Resume
