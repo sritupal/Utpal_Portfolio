@@ -5,43 +5,49 @@ import './About.css';
 const timelineEntries = [
   {
     id: 1,
-    period: 'Jan 2026 – Present',
-    company: 'DAMAC Living',
+    period: 'Jan 2026 – Nov 2026',
+    company: 'Cognizant',
+    project: 'DAMAC Living',
     role: 'Senior Performance Tester',
     description: 'Driving end-to-end performance testing for a leading real estate platform using Apache JMeter and Appium for mobile performance validation.'
   },
   {
     id: 2,
     period: 'Aug 2025 – Dec 2025',
-    company: 'Volkswagen',
+    company: 'Cognizant',
+    project: 'Volkswagen',
     role: 'QEA Associate',
     description: 'Performance testing with JMeter for Risk Management Systems. Automated tests with Selenium, Playwright, and Artillery.'
   },
   {
     id: 3,
     period: 'Jan 2025 – Jul 2025',
-    company: 'Lineage',
+    company: 'Cognizant',
+    project: 'Lineage',
     role: 'QEA Associate',
     description: 'JMeter-based performance testing for environment upgrade, ensuring system stability and reliability.'
   },
   {
     id: 4,
     period: 'Dec 2024 – Jan 2025',
-    company: 'American Tire Distributor',
+    company: 'Cognizant',
+    project: 'American Tire Distributor',
     role: 'QEA Associate',
     description: 'Database management and performance testing with LoadRunner and MySQL.'
   },
   {
     id: 5,
     period: 'Nov 2024 – Dec 2024',
-    company: 'Academy - Sports+Outdoors',
+    company: 'Cognizant',
+    project: 'Academy - Sports+Outdoors',
     role: 'QEA Associate',
     description: 'Optimized data storage and performance testing with LoadRunner/JMeter.'
   },
   {
     id: 6,
     period: 'Feb 2021 – Nov 2024',
-    company: 'Woolworths',
+    company: 'Cognizant',
+    project: 'Woolworths',
     role: 'QEA Programming Analyst Trainee',
     description: 'Automated test scripts with LoadRunner and JMeter. Improved operational efficiency via root cause analysis.'
   },
@@ -78,7 +84,7 @@ const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          I'm a Quality Engineering Analyst with 4+ years of experience at MNC, specialising in performance
+          I'm a Quality Engineering Analyst with 5 years of experience at MNC, specialising in performance
           testing and test automation for enterprise applications. I work extensively with{' '}
           <strong>JMeter</strong>, <strong>LoadRunner</strong>, and <strong>Selenium</strong> to build scalable
           testing frameworks and identify system bottlenecks before they hit production. Beyond testing, I bring
@@ -89,6 +95,7 @@ const About = () => {
 
         {/* Timeline */}
         <div className="about-timeline">
+          <p className="about-employment-note">Cognizant · Last working month: November 2026</p>
           {timelineEntries.map((entry, index) => (
             <motion.div
               key={entry.id}
@@ -104,6 +111,11 @@ const About = () => {
                 <h4 className="timeline-role">
                   {entry.role} — <span className="timeline-company">{entry.company}</span>
                 </h4>
+                {entry.project && (
+                  <p className="timeline-project">
+                    Project: <strong className="timeline-project-highlight">{entry.project}</strong>
+                  </p>
+                )}
                 <p className="timeline-desc">{entry.description}</p>
               </div>
             </motion.div>

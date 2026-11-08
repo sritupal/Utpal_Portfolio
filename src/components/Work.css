@@ -11,6 +11,12 @@
   color: var(--text-muted);
 }
 
+.work-employment-note {
+  margin: -3.5rem 0 2rem;
+  color: var(--navy);
+  font-weight: 700;
+}
+
 .work-snake-container {
   display: flex;
   gap: 3rem;
@@ -117,6 +123,20 @@
   margin-bottom: 0.25rem;
   font-family: var(--font-body);
   font-weight: 700;
+}
+
+.work-project-highlight {
+  background: linear-gradient(transparent 55%, rgba(170, 170, 0, 0.28) 55%);
+  padding: 0 0.15rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.work-card-company {
+  color: var(--olive);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
 }
 
 .work-card-role {

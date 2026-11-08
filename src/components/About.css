@@ -23,6 +23,27 @@
   max-width: 800px;
 }
 
+.about-employment-note {
+  color: var(--navy);
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.timeline-project {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-project-highlight {
+  color: var(--navy);
+  font-weight: 700;
+  background: linear-gradient(transparent 55%, rgba(170, 170, 0, 0.28) 55%);
+  padding: 0 0.15rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
 .timeline-entry {
   display: flex;
   gap: 1.5rem;

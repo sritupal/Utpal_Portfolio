@@ -6,7 +6,8 @@ const workEntries = [
   {
     id: 1,
     date: 'Jan 2026',
-    company: 'DAMAC Living',
+    company: 'Cognizant',
+    project: 'DAMAC Living',
     role: 'Senior Performance Tester',
     image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1000&auto=format&fit=crop',
     description: 'Leading performance testing for real estate platforms using JMeter and Appium.'
@@ -14,7 +15,8 @@ const workEntries = [
   {
     id: 2,
     date: 'Aug 2025',
-    company: 'Volkswagen',
+    company: 'Cognizant',
+    project: 'Volkswagen',
     role: 'QEA Associate',
     image: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=1000&auto=format&fit=crop',
     description: 'Automated stability testing for Risk Management Systems with JMeter and Selenium.'
@@ -22,7 +24,8 @@ const workEntries = [
   {
     id: 3,
     date: 'Jan 2025',
-    company: 'Lineage',
+    company: 'Cognizant',
+    project: 'Lineage',
     role: 'QEA Associate',
     image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1000&auto=format&fit=crop',
     description: 'Ensuring environment upgrade stability through rigorous performance validation.'
@@ -30,7 +33,8 @@ const workEntries = [
   {
     id: 4,
     date: 'Dec 2024',
-    company: 'American Tire Distributor',
+    company: 'Cognizant',
+    project: 'American Tire Distributor',
     role: 'QEA Associate',
     image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=1000&auto=format&fit=crop',
     description: 'Database management and performance testing with LoadRunner and MySQL.'
@@ -38,7 +42,8 @@ const workEntries = [
   {
     id: 5,
     date: 'Nov 2024',
-    company: 'Academy - Sports+Outdoors',
+    company: 'Cognizant',
+    project: 'Academy - Sports+Outdoors',
     role: 'QEA Associate',
     image: 'https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?q=80&w=1000&auto=format&fit=crop',
     description: 'Optimized data storage and performance testing with LoadRunner/JMeter.'
@@ -46,7 +51,8 @@ const workEntries = [
   {
     id: 6,
     date: 'Feb 2021',
-    company: 'Woolworths',
+    company: 'Cognizant',
+    project: 'Woolworths',
     role: 'QEA Programming Analyst Trainee',
     image: 'https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1000&auto=format&fit=crop',
     description: 'Developed automated test scripts and improved operational efficiency via root cause analysis.'
@@ -83,8 +89,9 @@ const Work = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          A selection of companies where I've implemented Quality Engineering and Performance Testing strategies.
+          Projects delivered at Cognizant for client organizations.
         </motion.p>
+        <p className="work-employment-note">Cognizant · Last working month: November 2026</p>
       </div>
 
       <div className="work-snake-container">
@@ -100,11 +107,16 @@ const Work = () => {
           >
             <div className="work-card">
               <div className="work-card-image">
-                <img src={work.image} alt={work.company} />
+                <img src={work.image} alt={work.project || work.company} />
                 <div className="work-card-date">{work.date}</div>
               </div>
               <div className="work-card-content">
-                <h3 className="work-card-title">{work.company}</h3>
+                <h3 className="work-card-title">
+                  <span className={work.project ? 'work-project-highlight' : undefined}>
+                    {work.project || work.company}
+                  </span>
+                </h3>
+                {work.project && <p className="work-card-company">Cognizant project</p>}
                 <h4 className="work-card-role">{work.role}</h4>
                 <p className="work-card-desc">{work.description}</p>
               </div>
